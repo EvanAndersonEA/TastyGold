@@ -8,11 +8,10 @@ public class RandomSpawner : MonoBehaviour
     List<GameObject> hazards = new List<GameObject>();
     int hazardToSpawn;
     GameObject spawnedHazard;
-    public const float timertime = 0.2f;
+    public const float timertime = 0.5f;
     private float timeLeft;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         timeLeft = timertime;
     }
@@ -35,7 +34,7 @@ public class RandomSpawner : MonoBehaviour
     {
         hazardToSpawn = Random.Range(0, hazards.Count);
         spawnedHazard = Instantiate(hazards[hazardToSpawn], new Vector3(9, Random.Range(-5f, 5f), 0), Quaternion.identity);
-        spawnedHazard.GetComponent<Rigidbody2D>().velocity = new Vector3(-20, 0, 0);
+        spawnedHazard.GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-50f, 50f);
     }
 
 }

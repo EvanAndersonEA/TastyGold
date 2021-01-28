@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2986004295346730592}
   - component: {fileID: 4306220134544025279}
   - component: {fileID: 7047529785302835582}
+  - component: {fileID: 5702054765410253153}
   m_Layer: 0
   m_Name: BadThing
   m_TagString: Untagged
@@ -97,8 +98,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 5
+  m_AngularDrag: 0.1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -143,5 +144,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6ffbdd7a5aadc43b73c549cb24330e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  widthThresold: {x: 100, y: 100}
-  heightThresold: {x: 100, y: 100}
+  destroyWidth: {x: 0, y: 0}
+  destroyHeight: {x: 0, y: 0}
+--- !u!114 &5702054765410253153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079893996773531981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa9fc93b87b4ca4f8a8c5468cfa939f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
