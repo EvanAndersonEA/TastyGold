@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     [SerializeField] TextMeshProUGUI healthText;
     [SerializeField] TextMeshProUGUI goldText;
     [SerializeField] TextMeshProUGUI loseText;
+    [SerializeField] AudioManager audioManager;
 
     Collider2D lastCollider = null;
 
@@ -31,12 +32,14 @@ public class Health : MonoBehaviour
             else
             {
                 health--;
+                audioManager.PlayHurtSound();
                 healthText.text = health.ToString();
             }
         }
         else if(collision.gameObject.tag == "Gold" && lastCollider != collision.collider)
         {
             gold++;
+            audioManager.PlayCollectSound();
             goldText.text = gold.ToString();
             Destroy(collision.gameObject);
         }

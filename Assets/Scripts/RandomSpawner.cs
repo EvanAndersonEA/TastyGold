@@ -34,7 +34,7 @@ public class RandomSpawner : MonoBehaviour
     void SpawnObstacle()
     {
         hazardToSpawn = Random.Range(0, hazards.Count);
-        spawnedHazard = Instantiate(hazards[hazardToSpawn], new Vector3(9, Random.Range(-5f, 5f), 0), Quaternion.identity);
+        spawnedHazard = Instantiate(hazards[hazardToSpawn], new Vector3(10, Random.Range(-5f, 5f), 0), Quaternion.identity);
         spawnedHazard.GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-50f, 50f);
     }
 
