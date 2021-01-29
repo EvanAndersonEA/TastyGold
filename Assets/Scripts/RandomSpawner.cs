@@ -8,7 +8,8 @@ public class RandomSpawner : MonoBehaviour
     List<GameObject> hazards = new List<GameObject>();
     int hazardToSpawn;
     GameObject spawnedHazard;
-    public const float timertime = 0.5f;
+
+    public float timertime = 0.001f;
     private float timeLeft;
 
     private void Awake()
