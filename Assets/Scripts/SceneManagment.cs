@@ -21,12 +21,14 @@ public class SceneManagment : MonoBehaviour
     public void LoadLoseScene()
     {
         StartCoroutine(LoadScene("LoseScene"));
+        StopAllCoroutines();
     }
 
     IEnumerator LoseTimer(int time)
     {
         yield return new WaitForSeconds(time);
         StartCoroutine(LoadScene("LoseScene"));
+        StopAllCoroutines();
     }
 
     IEnumerator LoadScene(string sceneName)
