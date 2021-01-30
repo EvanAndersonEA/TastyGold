@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     List<AudioClip> collectNoises = new List<AudioClip>();
     int clipToPlay;
+    int lastClipPlayed;
 
     private void Awake()
     {
@@ -29,7 +30,21 @@ public class AudioManager : MonoBehaviour
 
     void PlayRandomSoundFromList(List<AudioClip> soundClipList)
     {
-        clipToPlay = Random.Range(0, hurtNoises.Count);
-        audioSource.PlayOneShot(hurtNoises[clipToPlay]);
+        while (clipToPlay == lastClipPlayed)
+        {
+            clipToPlay = Random.Range(0, soundClipList.Count);
+        }
+
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            audioSource.PlayOneShot(soundClipList[clipToPlay]);
+        }
+        else
+        {
+            audioSource.PlayOneShot(soundClipList[clipToPlay]);
+        }
+        clipToPlay = lastClipPlayed;
     }
+
 }

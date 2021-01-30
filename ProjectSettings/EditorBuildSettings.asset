@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PanningScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: 563c24b8c8e8bd34e89e4f3135177fef
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 12c2abe29b7c26d4bb3ecf9f85359b62
   m_configObjects: {}

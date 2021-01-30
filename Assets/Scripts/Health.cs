@@ -5,19 +5,23 @@ using TMPro;
 
 public class Health : MonoBehaviour
 {
-    int health = 20;
-    int gold = 0;
+    int localHealth;
+    int localGold;
 
     [SerializeField] TextMeshProUGUI healthText;
     [SerializeField] TextMeshProUGUI goldText;
     [SerializeField] TextMeshProUGUI loseText;
     [SerializeField] AudioManager audioManager;
+    private SceneManagment sceneManager;
 
     Collider2D lastCollider = null;
 
     private void Awake()
     {
-        healthText.text = health.ToString();
+        sceneManager = FindObjectOfType<SceneManagment>();
+        sceneManager.GetComponent<SceneManagment>().health = 20;
+        sceneManager.GetComponent<SceneManagment>().gold = 0;
+        healthText.text = sceneManager.GetComponent<SceneManagment>().health.ToString();
         loseText.gameObject.SetActive(false);
     }
 
@@ -25,22 +29,23 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.tag == "Hazard" && lastCollider != collision.collider)
         {
-            if(health <= 0)
+            if(sceneManager.GetComponent<SceneManagment>().health <= 0)
             {
                 loseText.gameObject.SetActive(true);
+                sceneManager.LoadLoseScene();
             }
             else
             {
-                health--;
+                sceneManager.GetComponent<SceneManagment>().health--;
                 audioManager.PlayHurtSound();
-                healthText.text = health.ToString();
+                healthText.text = sceneManager.GetComponent<SceneManagment>().health.ToString();
             }
         }
-        else if(collision.gameObject.tag == "Gold" && lastCollider != collision.collider)
+        else if(collision.gameObject.tag == "Gold")
         {
-            gold++;
+            sceneManager.GetComponent<SceneManagment>().gold++;
             audioManager.PlayCollectSound();
-            goldText.text = gold.ToString();
+            goldText.text = sceneManager.GetComponent<SceneManagment>().gold.ToString();
             Destroy(collision.gameObject);
         }
         lastCollider = collision.collider;

@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa9fc93b87b4ca4f8a8c5468cfa939f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  acceleration: 5
+  maxSpeed: 50
 --- !u!114 &-3025792552362570411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,9 +163,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5289705, y: -0.2361474}
+  m_Offset: {x: -0.5289705, y: -0.4367857}
   serializedVersion: 2
-  m_Radius: 1.1447122
+  m_Radius: 1.3453505
 --- !u!58 &1434107346971076376
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -177,9 +179,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.57620025, y: -0.31171465}
+  m_Offset: {x: 0.57620025, y: -0.43894815}
   serializedVersion: 2
-  m_Radius: 1.191942
+  m_Radius: 1.3191755
 --- !u!1 &7389359894918711095
 GameObject:
   m_ObjectHideFlags: 0
