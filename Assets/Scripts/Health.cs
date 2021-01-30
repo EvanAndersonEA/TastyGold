@@ -22,7 +22,6 @@ public class Health : MonoBehaviour
         sceneManager.GetComponent<SceneManagment>().health = 10;
         sceneManager.GetComponent<SceneManagment>().gold = 0;
         healthText.text = sceneManager.GetComponent<SceneManagment>().health.ToString();
-        loseText.gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
