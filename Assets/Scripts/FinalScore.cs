@@ -16,7 +16,7 @@ public class FinalScore : MonoBehaviour
     {
         sceneManager = FindObjectOfType<SceneManagment>();
 
-        GetComponent<TextMeshProUGUI>().text = (((sceneManager.health - 5) * 2) + sceneManager.gold).ToString();
+        GetComponent<TextMeshProUGUI>().text = ("Score: " + (((sceneManager.health - 5) * 20) + sceneManager.gold *20).ToString());
         if (sceneManager.health <= 0)
         {
             loseMessage.text = ("Mercurey Poisoning Gets the Best of us");

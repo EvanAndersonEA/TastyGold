@@ -15,7 +15,7 @@ public class SceneManagment : MonoBehaviour
     public void LoadPanningScene()
     {
         StartCoroutine(LoadScene("PanningScene"));
-        StartCoroutine(LoseTimer(30));
+        StartCoroutine(LoseTimer(60));
     }
 
     public void LoadLoseScene()
