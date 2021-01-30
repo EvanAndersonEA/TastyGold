@@ -1411,7 +1411,7 @@ MonoBehaviour:
   - {fileID: 2079893996773531981, guid: 4ba686e52d0feba4d82e2c80f2b2a4dc, type: 3}
   - {fileID: 2079893996773531981, guid: f7346a4c6fa2f534f92969dfe7266fee, type: 3}
   - {fileID: 2079893996773531981, guid: ba510091a1ccea54d8395859b6d712dc, type: 3}
-  timertime: 0.4
+  timertime: 0.2
 --- !u!4 &1966101261
 Transform:
   m_ObjectHideFlags: 0

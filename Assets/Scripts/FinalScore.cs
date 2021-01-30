@@ -15,21 +15,15 @@ public class FinalScore : MonoBehaviour
     private void Awake()
     {
         sceneManager = FindObjectOfType<SceneManagment>();
-        if (health == true)
+
+        GetComponent<TextMeshProUGUI>().text = (((sceneManager.health - 5) * 2) + sceneManager.gold).ToString();
+        if (sceneManager.health <= 0)
         {
-            GetComponent<TextMeshProUGUI>().text = sceneManager.health.ToString();
-            if(sceneManager.health <= 0)
-            {
-                loseMessage.text = ("Mercurey Poisoning Gets the Best of us");
-            }
-            else
-            {
-                loseMessage.text = ("The day is done");
-            }
+            loseMessage.text = ("Mercurey Poisoning Gets the Best of us");
         }
         else
         {
-            GetComponent<TextMeshProUGUI>().text = sceneManager.gold.ToString();
+            loseMessage.text = ("The day is done");
         }
     }
 
