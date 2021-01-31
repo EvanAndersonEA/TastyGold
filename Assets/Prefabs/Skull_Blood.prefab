@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 7047529785302835582}
   - component: {fileID: 5702054765410253153}
   - component: {fileID: 5383643437819700571}
-  - component: {fileID: 6571828481257594217}
   - component: {fileID: 1511371719184768890}
   m_Layer: 0
-  m_Name: Duck
+  m_Name: Skull_Blood
   m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,9 +75,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a55b6d2f2fb9f24e8abcb6a4ac6ad00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8555cc5456a1dfd4c8ef1b8aaffec2e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 6.03, y: 6.03}
@@ -134,8 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa9fc93b87b4ca4f8a8c5468cfa939f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 30
-  maxSpeed: 30
+  acceleration: 20
+  maxSpeed: 20
 --- !u!114 &5383643437819700571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,22 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scalesize: 0.05
---- !u!58 &6571828481257594217
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079893996773531981}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.6181983, y: -0.13485408}
-  serializedVersion: 2
-  m_Radius: 0.7298436
 --- !u!58 &1511371719184768890
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,6 +161,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.81544495, y: -0.14224148}
+  m_Offset: {x: -0.118528605, y: -0.26174426}
   serializedVersion: 2
-  m_Radius: 0.6375935
+  m_Radius: 1.2129803
