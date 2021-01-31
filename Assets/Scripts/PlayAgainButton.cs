@@ -14,6 +14,8 @@ public class PlayAgainButton : MonoBehaviour
 
     public void PlayAgainButtonPress()
     {
+        StopAllCoroutines();
+        Debug.Log("timerEnded");
         sceneManagment.LoadPanningScene();
     }
 

@@ -22,6 +22,8 @@ public class SceneManagment : MonoBehaviour
     public void LoadLoseScene()
     {
         StartCoroutine(LoadScene("LoseScene"));
+        StopAllCoroutines();
+        Debug.Log("timer ended");
     }
 
     IEnumerator LoseTimer(int time)

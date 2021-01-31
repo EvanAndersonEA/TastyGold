@@ -10,7 +10,6 @@ public class Health : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI healthText;
     [SerializeField] TextMeshProUGUI goldText;
-    [SerializeField] TextMeshProUGUI loseText;
     [SerializeField] AudioManager audioManager;
     private SceneManagment sceneManager;
 
@@ -36,7 +35,7 @@ public class Health : MonoBehaviour
             {
                 sceneManager.GetComponent<SceneManagment>().health--;
                 audioManager.PlayHurtSound();
-                healthText.text = sceneManager.GetComponent<SceneManagment>().health + 1.ToString();
+                healthText.text = (sceneManager.GetComponent<SceneManagment>().health).ToString();
             }
         }
         else if(collision.gameObject.tag == "Gold")

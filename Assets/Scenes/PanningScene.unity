@@ -886,7 +886,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.378
+  m_Volume: 0.763
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1289,7 +1289,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 234455470}
   goldText: {fileID: 2115991755}
-  loseText: {fileID: 0}
   audioManager: {fileID: 1302764084}
 --- !u!114 &1623726090
 MonoBehaviour:
@@ -1317,7 +1316,7 @@ GameObject:
   - component: {fileID: 1668332142}
   - component: {fileID: 1668332141}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
