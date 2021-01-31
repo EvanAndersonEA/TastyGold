@@ -9,6 +9,7 @@ public class RandomSpawner : MonoBehaviour
     int hazardToSpawn;
     GameObject spawnedHazard;
 
+    public bool randomY;
     public float timertime = 0.001f;
     private float timeLeft;
 
@@ -34,7 +35,15 @@ public class RandomSpawner : MonoBehaviour
     void SpawnObstacle()
     {
         hazardToSpawn = Random.Range(0, hazards.Count);
-        spawnedHazard = Instantiate(hazards[hazardToSpawn], new Vector3(15, Random.Range(-5f, 5f), 0), Quaternion.identity);
+
+        if (randomY == true)
+        {
+            spawnedHazard = Instantiate(hazards[hazardToSpawn], new Vector3(15, Random.Range(-4f, 3f), 0), Quaternion.identity);
+        }
+        else
+        {
+            spawnedHazard = Instantiate(hazards[hazardToSpawn], new Vector3(15, -1f, 0), Quaternion.identity);
+        }
         spawnedHazard.GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-50f, 50f);
     }
 

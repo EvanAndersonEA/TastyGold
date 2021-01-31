@@ -13,11 +13,10 @@ GameObject:
   - component: {fileID: 2986004295346730592}
   - component: {fileID: 7047529785302835582}
   - component: {fileID: 5702054765410253153}
-  - component: {fileID: 5383643437819700571}
-  - component: {fileID: 6571828481257594217}
-  - component: {fileID: 1511371719184768890}
+  - component: {fileID: -3025792552362570411}
+  - component: {fileID: 1881242678047020893}
   m_Layer: 0
-  m_Name: Tire2
+  m_Name: Water
   m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2079893996773531981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1.3579, y: 1.3579, z: 1.3579}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,13 +74,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9e3f1384eadbad45a1de0bf5cb0b800, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: c409496de77843d4a9f015f492c71d57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.03, y: 6.03}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -134,9 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa9fc93b87b4ca4f8a8c5468cfa939f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 6
+  acceleration: 8
   maxSpeed: 10
---- !u!114 &5383643437819700571
+--- !u!114 &-3025792552362570411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,36 +147,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04f2c9e190d53346b0ec355abd5d5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scalesize: 0.05
---- !u!58 &6571828481257594217
-CircleCollider2D:
+  scalesize: 0.03
+--- !u!114 &1881242678047020893
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079893996773531981}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.3983829, y: 0.81608653}
-  serializedVersion: 2
-  m_Radius: 0.83019423
---- !u!58 &1511371719184768890
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079893996773531981}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.18944871, y: 0.6557839}
-  serializedVersion: 2
-  m_Radius: 0.80962265
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2dd890c2b4ad64ea790f7a0d995440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritelist:
+  - {fileID: 21300000, guid: c409496de77843d4a9f015f492c71d57, type: 3}
+  - {fileID: 21300000, guid: 6b0d6c9b9736fff42a2d291a93998b15, type: 3}
+  - {fileID: 21300000, guid: 843856e88240a1945933a035e58464b1, type: 3}

@@ -30,14 +30,13 @@ public class Health : MonoBehaviour
         {
             if(sceneManager.GetComponent<SceneManagment>().health <= 0)
             {
-                loseText.gameObject.SetActive(true);
                 sceneManager.LoadLoseScene();
             }
             else
             {
                 sceneManager.GetComponent<SceneManagment>().health--;
                 audioManager.PlayHurtSound();
-                healthText.text = sceneManager.GetComponent<SceneManagment>().health.ToString();
+                healthText.text = sceneManager.GetComponent<SceneManagment>().health + 1.ToString();
             }
         }
         else if(collision.gameObject.tag == "Gold")
