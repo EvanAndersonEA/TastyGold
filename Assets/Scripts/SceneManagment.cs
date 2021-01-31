@@ -22,7 +22,7 @@ public class SceneManagment : MonoBehaviour
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 0.4f;
         GetComponent<AudioSource>().PlayOneShot(riverMusic);
-        StartCoroutine(DayTimerRiver(10));
+        StartCoroutine(DayTimerRiver(80));
         Debug.Log("timer started");
     }
     public void LoadPoolScene()
@@ -31,7 +31,7 @@ public class SceneManagment : MonoBehaviour
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 0.4f;
         GetComponent<AudioSource>().PlayOneShot(riverMusic);
-        StartCoroutine(DayTimerPool(10));
+        StartCoroutine(DayTimerPool(80));
         Debug.Log("timer started");
     }
 
@@ -41,7 +41,7 @@ public class SceneManagment : MonoBehaviour
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 1f;
         GetComponent<AudioSource>().PlayOneShot(bloodMusic);
-        StartCoroutine(DayTimerBlood(10));
+        StartCoroutine(DayTimerBlood(80));
         Debug.Log("timer started");
     }
 
