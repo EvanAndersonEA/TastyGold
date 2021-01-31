@@ -130,8 +130,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 549202648}
-  - component: {fileID: 549202647}
   - component: {fileID: 549202649}
+  - component: {fileID: 549202647}
   m_Layer: 0
   m_Name: SceneManagment
   m_TagString: Untagged
@@ -153,6 +153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   gold: 0
+  bloodMusic: {fileID: 8300000, guid: b1e9c5bcc7e8f5f4497349253a9c93b1, type: 3}
+  riverMusic: {fileID: 8300000, guid: 97cbf2d4d0b8ece49ac4983b1f4793c4, type: 3}
+  poolMusic: {fileID: 8300000, guid: 1723d8e984e892f458b874b22907ced8, type: 3}
 --- !u!4 &549202648
 Transform:
   m_ObjectHideFlags: 0
@@ -177,7 +180,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 97cbf2d4d0b8ece49ac4983b1f4793c4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.658
   m_Pitch: 1
@@ -346,7 +349,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 549202647}
-        m_MethodName: LoadPanningScene
+        m_MethodName: LoadRiverScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

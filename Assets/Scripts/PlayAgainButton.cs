@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayAgainButton : MonoBehaviour
 {
     SceneManagment sceneManagment;
+    public int whatscene;
+
 
     private void Awake()
     {
@@ -16,7 +18,16 @@ public class PlayAgainButton : MonoBehaviour
     {
         StopAllCoroutines();
         Debug.Log("timerEnded");
-        sceneManagment.LoadPanningScene();
+        if(whatscene == 1)
+        {
+            sceneManagment.LoadPoolScene();
+        }else if(whatscene == 2)
+        {
+            sceneManagment.LoadBloodScene();
+        }else
+        {
+            sceneManagment.LoadRiverScene();
+        }
     }
 
     IEnumerator LoadScene(string sceneName)

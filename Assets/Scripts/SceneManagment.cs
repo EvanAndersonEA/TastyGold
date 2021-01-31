@@ -7,15 +7,41 @@ public class SceneManagment : MonoBehaviour
 {
     public int health;
     public int gold;
+    [SerializeField] AudioClip bloodMusic;
+    [SerializeField] AudioClip riverMusic;
+    [SerializeField] AudioClip poolMusic;
 
     private void Awake()
     {
         Object.DontDestroyOnLoad(this.gameObject);
     }
-    public void LoadPanningScene()
+
+    public void LoadRiverScene()
     {
-        StartCoroutine(LoadScene("PanningScene"));
-        StartCoroutine(LoseTimer(60));
+        StartCoroutine(LoadScene("RiverScene"));
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().volume = 0.4f;
+        GetComponent<AudioSource>().PlayOneShot(riverMusic);
+        StartCoroutine(DayTimerRiver(10));
+        Debug.Log("timer started");
+    }
+    public void LoadPoolScene()
+    {
+        StartCoroutine(LoadScene("PoolScene"));
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().volume = 0.4f;
+        GetComponent<AudioSource>().PlayOneShot(riverMusic);
+        StartCoroutine(DayTimerPool(10));
+        Debug.Log("timer started");
+    }
+
+    public void LoadBloodScene()
+    {
+        StartCoroutine(LoadScene("BloodScene"));
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().volume = 1f;
+        GetComponent<AudioSource>().PlayOneShot(bloodMusic);
+        StartCoroutine(DayTimerBlood(10));
         Debug.Log("timer started");
     }
 
@@ -26,7 +52,22 @@ public class SceneManagment : MonoBehaviour
         Debug.Log("timer ended");
     }
 
-    IEnumerator LoseTimer(int time)
+    IEnumerator DayTimerRiver(int time)
+    {
+        yield return new WaitForSeconds(time);
+        StartCoroutine(LoadScene("DayDoneRiver"));
+        StopAllCoroutines();
+        Debug.Log("timer ended");
+    }
+
+    IEnumerator DayTimerPool(int time)
+    {
+        yield return new WaitForSeconds(time);
+        StartCoroutine(LoadScene("DayDonePool"));
+        StopAllCoroutines();
+        Debug.Log("timer ended");
+    }
+    IEnumerator DayTimerBlood(int time)
     {
         yield return new WaitForSeconds(time);
         StartCoroutine(LoadScene("LoseScene"));
