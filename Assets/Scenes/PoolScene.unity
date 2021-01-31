@@ -1264,7 +1264,7 @@ MonoBehaviour:
   - {fileID: 2079893996773531981, guid: f7346a4c6fa2f534f92969dfe7266fee, type: 3}
   - {fileID: 2079893996773531981, guid: c03f4c7f5a040f4409643929c4f49f70, type: 3}
   randomY: 1
-  timertime: 0.3
+  timertime: 0.4
 --- !u!4 &1966101261
 Transform:
   m_ObjectHideFlags: 0
