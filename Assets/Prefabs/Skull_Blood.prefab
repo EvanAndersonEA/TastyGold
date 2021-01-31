@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa9fc93b87b4ca4f8a8c5468cfa939f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 20
-  maxSpeed: 20
+  acceleration: 15
+  maxSpeed: 15
 --- !u!114 &5383643437819700571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04f2c9e190d53346b0ec355abd5d5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scalesize: 0.03
+  scalesize: 0.04
 --- !u!58 &1511371719184768890
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         sceneManager = FindObjectOfType<SceneManagment>();
-        sceneManager.GetComponent<SceneManagment>().health = 20;
+        sceneManager.GetComponent<SceneManagment>().health = 15;
         sceneManager.GetComponent<SceneManagment>().gold = 0;
         healthText.text = sceneManager.GetComponent<SceneManagment>().health.ToString();
     }
