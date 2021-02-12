@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/DayDoneRiver.unity
     guid: ad3fbcb9231209746a575201128d9d74
   - enabled: 1
-    path: Assets/Scenes/PoolScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/DayDonePool.unity
     guid: 5983dc8c6da8f1b49b2be408aea8e18b
   - enabled: 1
@@ -26,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseScene.unity
     guid: 563c24b8c8e8bd34e89e4f3135177fef
+  - enabled: 1
+    path: Assets/Scenes/PoolScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

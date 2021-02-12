@@ -70,7 +70,7 @@ public class SceneManagment : MonoBehaviour
     IEnumerator DayTimerBlood(int time)
     {
         yield return new WaitForSeconds(time);
-        StartCoroutine(LoadScene("LoseScene"));
+        StartCoroutine(LoadScene("MainMenu"));
         StopAllCoroutines();
         Debug.Log("timer ended");
     }
