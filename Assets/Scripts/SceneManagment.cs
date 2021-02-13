@@ -18,7 +18,7 @@ public class SceneManagment : MonoBehaviour
 
     public void LoadRiverScene()
     {
-        StartCoroutine(LoadScene("RiverScene"));
+        LoadMyScene("RiverScene");
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 0.4f;
         GetComponent<AudioSource>().PlayOneShot(riverMusic);
@@ -27,7 +27,7 @@ public class SceneManagment : MonoBehaviour
     }
     public void LoadPoolScene()
     {
-        StartCoroutine(LoadScene("PoolScene"));
+        LoadMyScene("PoolScene");
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 0.4f;
         GetComponent<AudioSource>().PlayOneShot(riverMusic);
@@ -37,7 +37,7 @@ public class SceneManagment : MonoBehaviour
 
     public void LoadBloodScene()
     {
-        StartCoroutine(LoadScene("BloodScene"));
+        LoadMyScene("BloodScene");
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 1f;
         GetComponent<AudioSource>().PlayOneShot(bloodMusic);
@@ -47,7 +47,7 @@ public class SceneManagment : MonoBehaviour
 
     public void LoadLoseScene()
     {
-        StartCoroutine(LoadScene("LoseScene"));
+        LoadMyScene("LoseScene");
         StopAllCoroutines();
         Debug.Log("timer ended");
     }
@@ -55,7 +55,7 @@ public class SceneManagment : MonoBehaviour
     IEnumerator DayTimerRiver(int time)
     {
         yield return new WaitForSeconds(time);
-        StartCoroutine(LoadScene("DayDoneRiver"));
+        LoadMyScene("DayDoneRiver");
         StopAllCoroutines();
         Debug.Log("timer ended");
     }
@@ -63,25 +63,31 @@ public class SceneManagment : MonoBehaviour
     IEnumerator DayTimerPool(int time)
     {
         yield return new WaitForSeconds(time);
-        StartCoroutine(LoadScene("DayDonePool"));
+        LoadMyScene("DayDonePool");
         StopAllCoroutines();
         Debug.Log("timer ended");
     }
     IEnumerator DayTimerBlood(int time)
     {
         yield return new WaitForSeconds(time);
-        StartCoroutine(LoadScene("MainMenu"));
+        LoadMyScene("MainMenu");
         StopAllCoroutines();
         Debug.Log("timer ended");
     }
 
-    IEnumerator LoadScene(string sceneName)
+    public void LoadMyScene(string sceneName)
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
+        SceneManager.LoadScene(sceneName);
     }
+
+
+    //IEnumerator LoadScene(string sceneName)
+    //{
+    //    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+    //    while (!asyncLoad.isDone)
+    //    {
+    //        yield return null;
+    //    }
+    //}
 }
