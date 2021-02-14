@@ -13,7 +13,7 @@ public class FinalScore : MonoBehaviour
     {
         sceneManager = FindObjectOfType<SceneManagment>();
 
-        GetComponent<TextMeshProUGUI>().text = ("Score: " + (((sceneManager.health - 5) * 20) + sceneManager.gold *20).ToString());
+        GetComponent<TextMeshProUGUI>().text = ("Score: " + (((sceneManager.health) * 10) + sceneManager.gold *20).ToString());
     }
 
 }
