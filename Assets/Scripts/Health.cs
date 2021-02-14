@@ -18,9 +18,9 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         sceneManager = FindObjectOfType<SceneManagment>();
-        sceneManager.GetComponent<SceneManagment>().health = 5;
-        sceneManager.GetComponent<SceneManagment>().gold = 0;
+        sceneManager.GetComponent<SceneManagment>().health = 10;
         healthText.text = sceneManager.GetComponent<SceneManagment>().health.ToString();
+        goldText.text = sceneManager.GetComponent<SceneManagment>().gold.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

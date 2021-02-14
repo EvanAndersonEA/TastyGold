@@ -22,7 +22,7 @@ public class SceneManagment : MonoBehaviour
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 0.4f;
         GetComponent<AudioSource>().PlayOneShot(riverMusic);
-        StartCoroutine(DayTimerRiver(40));
+        StartCoroutine(DayTimerRiver(60));
         Debug.Log("timer started");
     }
     public void LoadPoolScene()
@@ -31,7 +31,7 @@ public class SceneManagment : MonoBehaviour
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 0.4f;
         GetComponent<AudioSource>().PlayOneShot(riverMusic);
-        StartCoroutine(DayTimerPool(40));
+        StartCoroutine(DayTimerPool(60));
         Debug.Log("timer started");
     }
 
@@ -41,7 +41,7 @@ public class SceneManagment : MonoBehaviour
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().volume = 1f;
         GetComponent<AudioSource>().PlayOneShot(bloodMusic);
-        StartCoroutine(DayTimerBlood(40));
+        StartCoroutine(DayTimerBlood(60));
         Debug.Log("timer started");
     }
 
@@ -59,7 +59,7 @@ public class SceneManagment : MonoBehaviour
         StopAllCoroutines();
         Debug.Log("timer ended");
     }
-
+     
     IEnumerator DayTimerPool(int time)
     {
         yield return new WaitForSeconds(time);
@@ -79,15 +79,4 @@ public class SceneManagment : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
-
-    //IEnumerator LoadScene(string sceneName)
-    //{
-    //    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-
-    //    while (!asyncLoad.isDone)
-    //    {
-    //        yield return null;
-    //    }
-    //}
 }
